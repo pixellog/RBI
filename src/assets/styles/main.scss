@@ -1,0 +1,99 @@
+$primary: #0099ff;
+$secondary: #828282;
+$info: #0163f3;
+$danger: #ff6699;
+$warning: #ff9933;
+$success: #33cc33;
+$custom-checkbox-indicator-border-radius: 0;
+$font-family-base: "Nanum Gothic", "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+@import '~bootstrap';
+
+html {
+  scroll-behavior: smooth;
+  line-height: 1.44;
+}
+
+body {
+  color: #4a4c5d;
+}
+
+::selection {
+  background: $info;
+  color: #fff;
+}
+
+[src*="@2x"], .x2 {
+  zoom: .5
+}
+
+img {
+  max-width: 100%;
+}
+
+.collapsed > .when-open,
+.not-collapsed > .when-closed {
+  display: none;
+}
+
+.text-whitespace {
+  white-space: pre-wrap;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.modal-title {
+  font-weight: bold;
+}
+
+.modal-backdrop {
+  opacity: .6;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control {
+  &::placeholder {
+    color: #a3a6bb;
+  }
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #2b5fa5;
+  background-color: #3b6fb4;
+}
+
+.custom-control-label::before {
+  border-color: #bbc4cf;
+}
+
+.btn-gradient {
+  border: 0;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  background-image: linear-gradient(to right, #6740ff 0%, #1c7fff 100%);
+
+  &:hover {
+    background-position: right center;
+  }
+}
+
+.popover-header {
+  background-color: $dark;
+  color: $white;
+}
+
+
+// RBI
+#modal-login {
+  .form-control {
+    border-width: 0 0 1px;
+    padding-left: 0;
+  }
+}
+
+
