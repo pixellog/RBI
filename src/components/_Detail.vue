@@ -18,8 +18,9 @@
                 <h6 class="text-danger px-3 py-2 mb-0 rounded-top" style="background-color:#f2f2f2;">
                     소음센서 #한화건설 포레나 루원시티 소음센서 {{item}}
                 </h6>
-                <div class="bg-white rounded-bottom" style="min-height: 200px;">
-                    <img src="/assets/images/graph.png" alt="" class="rounded-bottom">
+                <div class="bg-white rounded-bottom w-100" style="min-height: 200px;">
+                    <Graph class="w-100"/>
+<!--                    <img src="/assets/images/graph.png" alt="" class="rounded-bottom">-->
                 </div>
             </div>
         </div>
@@ -27,7 +28,9 @@
 </template>
 
 <script>
+    import Graph from "./_Graph";
     export default {
         name: 'Detail',
+        components: {Graph},
     }
 </script>

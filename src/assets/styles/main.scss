@@ -96,4 +96,20 @@ img {
   }
 }
 
+.custom-alert {
+  line-height: 1;
+  .alert-purple {
+    color: #bc2eff;
+    background-color: #f4d5ff;
+  }
 
+  .alert-primary {
+    color: #1034ff;
+    background-color: #d9dfff;
+  }
+
+  .alert-danger {
+    color: #f01343;
+    background-color: #fed7dd;
+  }
+}
