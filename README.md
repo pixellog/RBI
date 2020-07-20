@@ -4,6 +4,7 @@
 
 ## 사용 라이브러리
 https://bootstrap-vue.org/
+https://www.chartjs.org/ : 차트
 
 ## Project setup
 ```
