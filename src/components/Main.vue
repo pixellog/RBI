@@ -40,7 +40,7 @@
 
 
                             <div v-for="(item,index) in ['primary','success','warning', 'danger']">
-                                <b-link :id="`popover-target-${item}`" class="position-absolute" :style="`left: calc(200px * ${index+1}); top: calc(200px * ${index+.5});`">
+                                <b-link v-b-modal="'modal-detail'" :id="`popover-target-${item}`" class="position-absolute" :style="`left: calc(200px * ${index+1}); top: calc(200px * ${index+.5});`">
                                     <img :src="`/assets/images/spot-${item}.png`" alt="">
                                 </b-link>
 
