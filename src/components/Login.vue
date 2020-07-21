@@ -1,7 +1,8 @@
 <template>
     <div>
         <div class="min-vh-100">
-            <iframe class="w-100 min-vh-100 border" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAQhNs6tR3QVqrJTAZxne2c3E28-iwVwvo&q=Space+Needle,Seattle+WA" allowfullscreen></iframe>
+            <div id="map"></div>
+<!--            <iframe class="w-100 min-vh-100 border" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAQhNs6tR3QVqrJTAZxne2c3E28-iwVwvo&q=Space+Needle,Seattle+WA" allowfullscreen></iframe>-->
         </div>
 
         <b-modal id="modal-login" content-class="bg-transparent border-0" header-class="border-0" body-class="p-0" centered hide-header-close hide-footer scrollable no-close-on-backdrop>
