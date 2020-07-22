@@ -1,10 +1,11 @@
-$('[data-toggle="popover"]').popover({
-    html: true,
-    content: function () {
-        return $(this).next('.popper-content').html()
-    }
+$(function () {
+    $('[data-toggle="popover"]').popover({
+        html: true,
+        content: function () {
+            return $(this).next('.popper-content').html()
+        }
+    });
 });
-
 new Vue({
     el: "#app",
     data: function () {

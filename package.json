@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "bootstrap-icons": "^1.0.0-alpha5",
     "chartjs": "^0.3.24",
     "jquery": "^3.5.1",
     "vuejs": "^3.0.1"
