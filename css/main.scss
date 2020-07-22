@@ -6,7 +6,8 @@ $warning: #ff9933;
 $success: #33cc33;
 $custom-checkbox-indicator-border-radius: 0;
 $font-family-base: "Nanum Gothic", "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
-@import '~bootstrap';
+//@import '~bootstrap';
+@import "node_modules/bootstrap/scss/bootstrap";
 
 html {
   scroll-behavior: smooth;
@@ -87,6 +88,13 @@ img {
   color: $white;
 }
 
+.rounded-top {
+  border-radius: .5rem .5rem 0 0 !important;
+}
+
+.rounded-bottom {
+  border-radius: 0 0 .5rem .5rem !important;
+}
 
 // RBI
 #modal-login {
@@ -98,6 +106,7 @@ img {
 
 .custom-alert {
   line-height: 1;
+
   .alert-purple {
     color: #bc2eff;
     background-color: #f4d5ff;
@@ -114,8 +123,6 @@ img {
   }
 }
 
-
-#map {
-  height: 100vh;
-  width: 100%;
+.popover-body {
+  padding: 0;
 }

@@ -1,50 +1,25 @@
 {
   "name": "RBI",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.10",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
-    "bootstrap-vue": "^2.15.0",
-    "chart.js": "^2.9.3",
-    "core-js": "^3.6.5",
-    "google-maps": "^4.3.2",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^9.0.2",
-    "vue": "^2.6.11",
-    "vue-chartjs": "^3.5.0",
-    "vue-router": "^3.3.4"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.4.0",
-    "@vue/cli-plugin-eslint": "~4.4.0",
-    "@vue/cli-service": "~4.4.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/base",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "chartjs": "^0.3.24",
+    "jquery": "^3.5.1",
+    "vuejs": "^3.0.1"
+  }
 }

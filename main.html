@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <title>RBI 건설 웹 모니터링 > 메인</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="app" class="min-vh-100 p-3">
+    <div class="row">
+        <div class="col d-flex align-items-center">
+            <img src="img/icon.png" alt="" style="width: 40px;">
+            <a href="/" class="ml-2 h5 mb-0 text-dark font-weight-bold">RBI 모니터링</a>
+        </div>
+        <div class="col d-flex">
+            <button class="btn btn-sm btn-light shadow-sm bg-white rounded-lg px-3 text-secondary ml-auto">2020-06-25 14:23<!-- <i icon="arrow-clockwise" class="ml-1" font-scale="1.2"/>--></button>
+        </div>
+    </div>
+
+    <section class="mt-3 shadow">
+        <div class="row no-gutters">
+            <div class="col-10 position-relative overflow-hidden" style="height: calc(100vh - 88px)">
+                <!-- 지도영역 -->
+                <div id="map" class="position-absolute w-100 h-100" style="border-radius: .75rem 0 0 .75rem"></div>
+                <div v-for="(item,index) in ['primary','success','warning', 'danger']">
+                    <a href="#none"
+                       data-toggle="modal" data-target="#modal-detail"
+                       data-toggle="popover" data-trigger="hover"
+                       class="position-absolute"
+                       :style="`left: calc(200px * ${index+1}); top: calc(200px * ${index+.5});`">
+                        <img :src="`img/spot-${item}.png`" alt="">
+                    </a>
+
+                    <div class="popper-content d-none">
+                        <div class="arrow"></div>
+                        <h3 class="popover-header">그룹 A, 그룹 B</h3>
+                        <div class="popover-body p-2">
+                            <h5 class="mb-0">한화건설 - 포레나루원시티 2</h5>
+                            <small class="text-secondary">인천광역시 서구 가정동 255-23</small>
+                            <hr style="margin-left: -15px; margin-right: -15px;">
+
+                            <div v-for="(item,index) in ['text-primary','text-success','text-warning','text-danger']">
+                                <div class="d-flex justify-content-between" :class="item">
+                                    <span>소음센서 {{index}} - Leq</span>
+                                    <span>65.6 dB(A)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- controller -->
+                <!--<div style="position:absolute; right: 10px;bottom: 10px; z-index: 1000">
+                    <button class="btn btn-sm btn-light btn-block shadow">
+&lt;!&ndash;                        <i font-scale="1.2" icon="cursor-fill"/>&ndash;&gt;
+                    </button>
+                    <button class="btn btn-sm btn-light btn-block shadow">
+&lt;!&ndash;                        <i font-scale="1.2" icon="plus"/>&ndash;&gt;
+                    </button>
+                    <button class="btn btn-sm btn-light shadow" style="margin-top: 1px;">
+&lt;!&ndash;                        <i font-scale="1.2" icon="dash"/>&ndash;&gt;
+                    </button>
+                </div>-->
+
+
+            </div>
+            <div class="col-2 px-3 pt-3">
+
+                <div class="position-relative">
+                    <div class="input-group ml-auto border rounded">
+                        <input type="search" @focus="search = true" class="form-control border-0"></input>
+                        <div class="input-group-append">
+                            <button @click="search = false" class="btn text-secondary bg-white border-0">
+                                <i font-scale="1.2" icon="search">search</i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="border p-3 rounded-lg position-absolute w-100 bg-white" style="top: 40px; z-index: 1000" v-if="search">
+                        <div class="text-primary d-flex font-weight-bold">검색 결과[5개]
+                            <a href="#none" class="ml-auto" @click="search = false">
+                                <i font-scale="1.5" icon="x">x</i>
+                            </a>
+                        </div>
+                        <!-- 결과값이 10개 이상이면 스크롤 -->
+                        <ul class="list-unstyled mb-0 mt-2" style="max-height: 240px; overflow-y: auto">
+                            <li v-for="item in 11"><a href="#none" class="text-dark">현대건설 - 광교산 힐스테이트 {{item}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div role="tablist" class="mt-3" style="height: calc(100vh - 160px); overflow-x: hidden; overflow-y: auto">
+
+                    <div class="accordion" :id="`accordion-${item}`" v-for="(item,index) in 12">
+                        <div class="card">
+                            <div class="card-header p-0 border-0" :id="`heading-${item}`">
+                                <button class="btn btn-dark btn-block rounded-0 text-left" type="button" data-toggle="collapse" :data-target="`#collapse-${item}`" aria-expanded="true" :aria-controls="`collapse-${item}`">
+                                    <span>그룹 {{item}}</span>
+                                    <span class="float-right when-open"><i class="ml-auto" icon="dash" variant="info" font-scale="1.5"></i></span>
+                                    <span class="float-right when-closed"><i class="ml-auto" icon="plus" variant="info" font-scale="1.5"></i></span>
+                                </button>
+                            </div>
+
+                            <div :id="`collapse-${item}`" class="collapse" :class="{'show' : index==0}" :aria-labelledby="`heading-${item}`" :data-parent="`#accordion-${item}`">
+                                <div class="card-body p-0">
+                                    <div class="px-3 py-2 border-bottom text-secondary">현장 목록 (4)</div>
+                                    <div class="px-3">
+                                        <div v-for="item in 3" class="my-3">
+                                            <a href="#none"
+                                               data-toggle="modal" data-target="#modal-detail"
+                                               class="h6 text-dark">GS건설 - 파주 법원 {{item}}</a>
+                                            <div v-for="(item,index) in ['text-primary','text-success','text-warning','text-danger']">
+                                                <div class="d-flex justify-content-between small" :class="item">
+                                                    <span>소음센서 {{index}} - Leq</span>
+                                                    <span>65.6 dB(A)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- 상세팝업-->
+<div id="modal-detail" class="modal" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 bg-transparent">
+            <div class="modal-header d-block p-0">
+                <div class="bg-dark text-white px-3 py-2 w-100 rounded-top">그룹 A, 그룹 B</div>
+                <div class="bg-white p-3 d-flex align-items-center">
+                    <div>
+                        <h5 class="mb-0 mt-2">한화건설 - 포레나루원시티 2</h5>
+                        <small class="text-secondary">인천광역시 서구 가정동 255-23</small>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body p-0 py-1 rounded-bottom" style="background-color:#d3d8e3;">
+                <div class="m-2 shadow-sm">
+                    <h6 class="text-danger px-3 py-2 mb-0 rounded-top" style="background-color:#f2f2f2;">
+                        소음센서 #한화건설 포레나 루원시티 소음센서
+                    </h6>
+                    <div class="bg-white rounded-bottom w-100" style="min-height: 200px;">
+                        <div class="p-3">
+                            <div class="row justify-content-center custom-alert">
+                                <div style="width: 2.2rem; height: 2.2rem;" class="center rounded-circle small font-weight-bold mx-2 alert-purple">Leq</div>
+                                <div style="width: 2.2rem; height: 2.2rem;" class="center rounded-circle small font-weight-bold mx-2 alert-primary">Lmax</div>
+                                <div style="width: 2.2rem; height: 2.2rem;" class="center rounded-circle small font-weight-bold mx-2 alert-danger">L10</div>
+                            </div>
+
+                            <div class="row my-4">
+                                <div class="col text-center text-danger" style="color:#f70059!important;" v-for="(value,key) in items">
+                                    <span class="h5 font-weight-bold">{{key}}</span>
+                                    <div>
+                                        <span class="h1 font-weight-bold">{{value}}</span>
+                                        <span class="h6">dB(A)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="graph">
+                                <canvas id="myChart" width="100%" height="170"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        var uluru = {lat: -25.344, lng: 131.036};
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 4, center: uluru});
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({position: uluru, map: map});
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVKiKdhyXpbz9QMEQ8jjQO9CuuGB0bR-8&callback=initMap"></script>
+<script src="js/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
