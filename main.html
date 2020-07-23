@@ -105,8 +105,8 @@
                                 <div class="card-header p-0 border-0" :id="`heading-${item}`">
                                     <button class="btn btn-dark btn-block text-left" :class="{'collapsed' : index!=0}" type="button" data-toggle="collapse" :data-target="`#collapse-${item}`" aria-expanded="true" :aria-controls="`collapse-${item}`">
                                         <span>그룹 {{item}}</span>
-                                        <span class="float-right when-open text-primary h5 mb-0">+</span>
-                                        <span class="float-right when-closed text-primary h4 mb-0 lh-1">-</span>
+                                        <span class="float-right bi when-open"></span>
+                                        <span class="float-right bi when-closed"></span>
                                     </button>
                                 </div>
 
@@ -204,6 +204,8 @@
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVKiKdhyXpbz9QMEQ8jjQO9CuuGB0bR-8&callback=initMap"></script>
 <script src="js/vue.js"></script>
+<!-- todo : chart.js : 로컬 테스트가 안되서 cdn으로 개발중, 배포시 로컬 파일로 교체 -->
+<!--<script src="js/chart.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script src="js/main.js"></script>
 </body>
