@@ -201,6 +201,11 @@
         // The marker, positioned at Uluru
         var marker = new google.maps.Marker({position: uluru, map: map});
     }
+
+    $(function () {
+        // todo : 로컬 확인용
+        initMap();
+    });
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVKiKdhyXpbz9QMEQ8jjQO9CuuGB0bR-8&callback=initMap"></script>
 <script src="js/vue.js"></script>
