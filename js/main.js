@@ -9,6 +9,11 @@ $(function () {
     });
 });
 
+// todo : 8.7 로그아웃
+function logout() {
+    window.location.href = 'index.html';
+}
+
 new Vue({
     el: "#app",
     data: function () {

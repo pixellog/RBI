@@ -10,13 +10,15 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
     margin: 0;
-    font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;
+    /*8.7 : 폰트 수정*/
+    font-family: "Nanum Gothic", helvetica, "Apple SD Gothic Neo", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #112943;
     text-align: left;
-    background-color: #D9DEE9;
+    /*8.7 : 백그라운드 컬러 수정*/
+    background-color: #ffffff;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) { outline: 0 !important; }
@@ -4290,11 +4292,11 @@ img { max-width: 100%; }
 
 .card-header .btn-dark[aria-expanded="true"] { background-image: url(../img/plus-blue.png); }
 
-.spot-img { transition: all .2s; }
 
-.spot-img { transform: scale(.51); }
-.spot-img:hover { transform: scale(1); }
-
+/*8.7 : 위치이미지 관련 수정*/
+.spot-img { transition: all .2s; transform-origin: 50%; transform: scale(1);}
+.spot-img:hover {transform: scale(2);}
+/*8.7 : end*/
 .form-control:focus,.btn:focus {
     box-shadow: none;
 }

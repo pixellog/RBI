@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="favicon.ico">
     <title>RBI 건설 웹 모니터링 > 메인</title>
-    <link rel="stylesheet" href="http://221.143.20.239:8888/user/css/main.css">
+    <!--8.7 : 외부링크 삭제-->
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -15,9 +15,18 @@
         <div class="col d-flex align-items-center">
             <img src="img/icon.png" alt="" style="width: 40px;">
             <a href="/" class="ml-2 h5 mb-0 text-dark font-weight-bold">RBI 모니터링</a>
+            <!--8.7 : 로그인관련 추가-->
+            <select name="" id="" class="custom-select ml-3" style="width: 180px;">
+                <option value="0" selected>관리자 화면</option>
+                <option value="1">사용자 화면</option>
+                <option value="2">지자체 화면</option>
+            </select>
         </div>
-        <div class="col d-flex">
-            <button onclick="$('.spot-img').trigger('hover')" class="btn btn-sm btn-light shadow bg-white rounded-lg px-3 text-secondary ml-auto">2020-06-25 14:23 <img src="img/arrow-clockwise.png" alt=""></button>
+        <div class="col d-flex align-items-center">
+            <div class="ml-auto"><span>test</span> 님</div>
+            <button onclick="logout()" class="btn btn-lg btn-light shadow bg-white rounded-xl px-3 text-secondary ml-3">logout</button>
+            <!--8.7 : end-->
+            <button onclick="$('.spot-img').trigger('hover')" class="btn btn-lg btn-light shadow bg-white rounded-xl px-3 text-secondary ml-3">2020-06-25 14:23 <img src="img/arrow-clockwise.png" alt=""></button>
         </div>
     </div>
 
@@ -47,7 +56,9 @@
                        data-toggle="popover" data-trigger="hover"
                        class="position-absolute spot-img"
                        :style="`left: calc(200px * ${index+1}); top: calc(200px * ${index+.5});`">
-                        <img :src="`img/spot-${item}.png`" alt="">
+                        <!--8.7 : 이미지 변경 -->
+                        <img :src="`img/spot-${item}.svg`" alt="" style="width: 46px;height: 55px;">
+                        <!--8.7 : end-->
                     </a>
 
                     <div class="popper-content d-none">
