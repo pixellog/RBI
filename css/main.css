@@ -4242,6 +4242,8 @@ html { scroll-behavior: smooth; line-height: 1.44; }
 
 img { max-width: 100%; }
 
+.btn { font-family: "Nanum Gothic", helvetica, "Apple SD Gothic Neo", sans-serif;}
+
 .collapsed .when-open { display: none; }
 
 .btn:not(.collapsed) .when-closed { display: none; }
@@ -4299,4 +4301,35 @@ img { max-width: 100%; }
 /*8.7 : end*/
 .form-control:focus,.btn:focus {
     box-shadow: none;
+}
+
+/* 8.10 추가 */
+.dropdown-toggle {
+    border-color: #cbcbcb;
+    color: #2967ec;
+    font-weight: bold;
+    text-align: left;
+}
+
+.dropdown-toggle::after {
+    position: absolute;
+    right: 10px;
+    top: 13px;
+}
+
+.dropdown-menu {
+    margin-top: -1px;
+    padding: 0;
+}
+
+.dropdown-item {
+    color: #a0a0a0;
+    font-weight: bold;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #2967ec;
+    text-decoration: none;
+    background-color: #eeeeee;
 }

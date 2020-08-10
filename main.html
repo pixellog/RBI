@@ -16,17 +16,28 @@
             <img src="img/icon.png" alt="" style="width: 40px;">
             <a href="/" class="ml-2 h5 mb-0 text-dark font-weight-bold">RBI 모니터링</a>
             <!--8.7 : 로그인관련 추가-->
-            <select name="" id="" class="custom-select ml-3" style="width: 180px;">
+            <!--<select name="" id="" class="custom-select-sm shadow  ml-3" style="width: 180px;">
                 <option value="0" selected>관리자 화면</option>
                 <option value="1">사용자 화면</option>
                 <option value="2">지자체 화면</option>
-            </select>
+            </select>-->
+            <div class="dropdown ml-3">
+                <!--  https://getbootstrap.com/docs/4.5/components/dropdowns/ -->
+                <button class="btn btn-sm shadow dropdown-toggle" style="width: 160px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    지자체 화면
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item btn-sm" href="#">관리자 화면</a>
+                    <a class="dropdown-item btn-sm" href="#">사용자 화면</a>
+                    <a class="dropdown-item btn-sm" href="#">지자체 화면</a>
+                </div>
+            </div>
         </div>
         <div class="col d-flex align-items-center">
             <div class="ml-auto"><span>test</span> 님</div>
-            <button onclick="logout()" class="btn btn-lg btn-light shadow bg-white rounded-xl px-3 text-secondary ml-3">logout</button>
+            <button onclick="logout()" class="btn btn-sm btn-light shadow bg-white rounded-xl px-3 text-secondary ml-3">logout</button>
             <!--8.7 : end-->
-            <button onclick="$('.spot-img').trigger('hover')" class="btn btn-lg btn-light shadow bg-white rounded-xl px-3 text-secondary ml-3">2020-06-25 14:23 <img src="img/arrow-clockwise.png" alt=""></button>
+            <button onclick="$('.spot-img').trigger('hover')" class="btn btn-sm btn-light shadow bg-white rounded-xl px-3 text-secondary ml-3">2020-06-25 14:23 <img src="img/arrow-clockwise.png" alt=""></button>
         </div>
     </div>
 
