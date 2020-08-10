@@ -1,0 +1,307 @@
+.cpanel.censor-dust.status-good .cpanel-alert {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-dust.status-good .card-header {
+    background-color: #0856D0;
+}
+
+.cpanel.censor-dust.status-good .card-header .title,
+.cpanel.censor-dust.status-good .card-header .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cpanel.censor-dust.status-good .card-header .status {
+    color: #00EAFF;
+}
+
+.cpanel.censor-dust.status-good .card-body {
+    color: #FFFFFF;
+    background-color: #0163F3;
+    background-image: radial-gradient(ellipse 50% 50% at 50% 75%, #10A6F4 0, transparent 100%);
+}
+
+.cpanel.censor-dust.status-good .card-body .nav-tabs .nav-link,
+.cpanel.censor-dust.status-good .card-body .nav-tabs .nav-link .ctitle .citem {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-dust.status-normal .cpanel-alert {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-dust.status-normal .card-header {
+    background-color: #459112;
+}
+
+.cpanel.censor-dust.status-normal .card-header .title,
+.cpanel.censor-dust.status-normal .card-header .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cpanel.censor-dust.status-normal .card-header .status {
+    color: #95FE00;
+}
+
+.cpanel.censor-dust.status-normal .card-body {
+    color: #FFFFFF;
+    background-color: #56A814;
+    background-image: radial-gradient(ellipse 50% 50% at 50% 75%, #6FD91A 0, transparent 100%);
+}
+
+.cpanel.censor-dust.status-normal .card-body .nav-tabs .nav-link,
+.cpanel.censor-dust.status-normal .card-body .nav-tabs .nav-link .ctitle .citem {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-dust.status-bad .cpanel-alert {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-dust.status-bad .card-header {
+    background-color: #E87E06;
+}
+
+.cpanel.censor-dust.status-bad .card-header .title,
+.cpanel.censor-dust.status-bad .card-header .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cpanel.censor-dust.status-bad .card-header .status {
+    color: #F4F52C;
+}
+
+.cpanel.censor-dust.status-bad .card-body {
+    color: #FFFFFF;
+    background-color: #EC8E07;
+    background-image: radial-gradient(ellipse 50% 50% at 50% 75%, #FFC424 0, transparent 100%);
+}
+
+.cpanel.censor-dust.status-bad .card-body .nav-tabs .nav-link,
+.cpanel.censor-dust.status-bad .card-body .nav-tabs .nav-link .ctitle .citem {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-dust.status-alert .cpanel-alert {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-dust.status-alert .card-header {
+    background-color: #C82500;
+}
+
+.cpanel.censor-dust.status-alert .card-header .title,
+.cpanel.censor-dust.status-alert .card-header .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cpanel.censor-dust.status-alert .card-header .status {
+    color: #FFEA00;
+}
+
+.cpanel.censor-dust.status-alert .card-body {
+    color: #FFFFFF;
+    background-color: #D53700;
+    background-image: radial-gradient(ellipse 50% 50% at 50% 75%, #FA8D00 0, transparent 100%);
+}
+
+.cpanel.censor-dust.status-alert .card-body .nav-tabs .nav-link,
+.cpanel.censor-dust.status-alert .card-body .nav-tabs .nav-link .ctitle .citem {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-vib .cpanel-alert {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-vib .card-header {
+    background-color: #2F2A5A;
+}
+
+.cpanel.censor-vib .card-header .title,
+.cpanel.censor-vib .card-header .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cpanel.censor-vib .card-header .status {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cpanel.censor-vib .card-body {
+    color: #FFFFFF;
+    background-color: #0D0834;
+    background-image: radial-gradient(ellipse 50% 50% at 50% 75%, #146CA4 0, transparent 100%);
+}
+
+.cpanel.censor-vib .card-body .nav-tabs .nav-link,
+.cpanel.censor-vib .card-body .nav-tabs .nav-link .ctitle .citem {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-vib2 .cpanel-alert {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-vib2 .card-header {
+    background-color: #2F2A5A;
+}
+
+.cpanel.censor-vib2 .card-header .title,
+.cpanel.censor-vib2 .card-header .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cpanel.censor-vib2 .card-header .status {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cpanel.censor-vib2 .card-body {
+    color: #FFFFFF;
+    background-color: #0D0834;
+    background-image: radial-gradient(ellipse 50% 50% at 50% 75%, #670D7D 0, transparent 100%);
+}
+
+.cpanel.censor-vib2 .card-body .nav-tabs .nav-link,
+.cpanel.censor-vib2 .card-body .nav-tabs .nav-link .ctitle .citem {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-gas .cpanel-alert {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-gas .card-header {
+    background-color: #2F2A5A;
+}
+
+.cpanel.censor-gas .card-header .title,
+.cpanel.censor-gas .card-header .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cpanel.censor-gas .card-header .status {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cpanel.censor-gas .card-body {
+    color: #FFFFFF;
+    background-color: #0D0834;
+    background-image: radial-gradient(ellipse 50% 50% at 50% 75%, #1E695E 0, transparent 100%);
+}
+
+.cpanel.censor-gas .card-body .nav-tabs .nav-link,
+.cpanel.censor-gas .card-body .nav-tabs .nav-link .ctitle .citem {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-weather .cpanel-alert {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-weather .card-header {
+    background-color: #8F37EF;
+}
+
+.cpanel.censor-weather .card-header .title,
+.cpanel.censor-weather .card-header .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cpanel.censor-weather .card-header .status {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cpanel.censor-weather .card-body {
+    color: #FFFFFF;
+    background-color: #9C40FF;
+    background-image: radial-gradient(ellipse 50% 50% at 50% 75%, #CB80FF 0, transparent 100%);
+}
+
+.cpanel.censor-weather .card-body .nav-tabs .nav-link,
+.cpanel.censor-weather .card-body .nav-tabs .nav-link .ctitle .citem {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-slope .cpanel-alert {
+    color: #000000;
+}
+
+.cpanel.censor-slope .card-header {
+    background-color: #FFFFFF;
+}
+
+.cpanel.censor-slope .card-header .title,
+.cpanel.censor-slope .card-header .nav-link {
+    color: #666666;
+}
+
+.cpanel.censor-slope .card-header .status {
+    color: rgba(102, 102, 102, 0.5);
+}
+
+.cpanel.censor-slope .card-body {
+    color: #4A74FF;
+    background-color: #FFFFFF;
+    background-image: radial-gradient(ellipse 50% 50% at 50% 75%, #FFFFFF 0, transparent 100%);
+}
+
+.cpanel.censor-slope .card-body .nav-tabs .nav-link,
+.cpanel.censor-slope .card-body .nav-tabs .nav-link .ctitle .citem {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-noise .cpanel-alert {
+    color: #000000;
+}
+
+.cpanel.censor-noise .card-header {
+    background-color: #FFFFFF;
+}
+
+.cpanel.censor-noise .card-header .title,
+.cpanel.censor-noise .card-header .nav-link {
+    color: #666666;
+}
+
+.cpanel.censor-noise .card-header .status {
+    color: rgba(102, 102, 102, 0.5);
+}
+
+.cpanel.censor-noise .card-body {
+    color: #f70059;
+    background-color: #FFFFFF;
+    background-image: radial-gradient(ellipse 50% 50% at 50% 75%, #FFFFFF 0, transparent 100%);
+}
+
+.cpanel.censor-noise .card-body .nav-tabs .nav-link,
+.cpanel.censor-noise .card-body .nav-tabs .nav-link .ctitle .citem {
+    color: #FFFFFF;
+}
+
+.cpanel.censor-noise2 .cpanel-alert {
+    color: #000000;
+}
+
+.cpanel.censor-noise2 .card-header {
+    background-color: #f9f9fa;
+}
+
+.cpanel.censor-noise2 .card-header .title,
+.cpanel.censor-noise2 .card-header .nav-link {
+    color: #f80c61;
+}
+
+.cpanel.censor-noise2 .card-header .status {
+    color: rgba(102, 102, 102, 0.5);
+}
+
+.cpanel.censor-noise2 .card-body {
+    color: #f70059;
+    background-color: #FFFFFF;
+    background-image: radial-gradient(ellipse 50% 50% at 50% 75%, #FFFFFF 0, transparent 100%);
+}
+
+.cpanel.censor-noise2 .card-body .nav-tabs .nav-link,
+.cpanel.censor-noise2 .card-body .nav-tabs .nav-link .ctitle .citem {
+    color: #f70059;
+}

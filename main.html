@@ -8,6 +8,7 @@
     <title>RBI 건설 웹 모니터링 > 메인</title>
     <!--8.7 : 외부링크 삭제-->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cpanel.css">
 </head>
 <body>
 <div id="app" class="min-vh-100 p-3">
@@ -35,9 +36,9 @@
         </div>
         <div class="col d-flex align-items-center">
             <div class="ml-auto"><span>test</span> 님</div>
-            <button onclick="logout()" style="width: 107px;" class="btn btn-sm btn-light shadow bg-white rounded-xl px-3 text-secondary ml-3">logout</button>
+            <button onclick="logout()" style="width: 88px;" class="btn btn-sm btn-light shadow bg-white rounded-xl px-3 text-secondary ml-3">logout</button>
             <!--8.7 : end-->
-            <button onclick="$('.spot-img').trigger('hover')" class="btn btn-sm btn-light shadow bg-white rounded-xl px-3 text-secondary ml-3">2020-06-25 14:23 <img src="img/arrow-clockwise.png" alt=""></button>
+            <button onclick="$('.spot-img').trigger('hover')" class="btn btn-sm btn-light shadow bg-white rounded-xl px-3 text-secondary ml-3">2020-06-25 22:14:23 <img src="img/arrow-clockwise.png" alt=""></button>
         </div>
     </div>
 
@@ -62,11 +63,11 @@
                 </div>
 
                 <!-- 마커 -->
-                <div class="xx" data-toggle="modal" data-target="#modal-detail" v-for="(item,index) in ['primary','success','warning', 'danger']" tabindex="0">
+                <div class="xx" data-toggle="modal" data-target="#modal-detail" v-for="(item,index) in ['primary','success','warning', 'danger','noise','weather']" tabindex="0">
                     <a href="#none"
                        data-toggle="popover" data-trigger="hover"
                        class="position-absolute spot-img"
-                       :style="`left: calc(200px * ${index+1}); top: calc(200px * ${index+.5});`">
+                       :style="`left: calc(200px * ${index+1}); top: calc(100px * ${index+.5});`">
                         <!--8.7 : 이미지 변경 -->
                         <img :src="`img/spot-${item}.svg`" alt="" style="width: 46px;height: 55px;">
                         <!--8.7 : end-->
@@ -75,6 +76,12 @@
                     <div class="popper-content d-none">
                         <div class="arrow"></div>
                         <h3 class="popover-header">그룹 A, 그룹 B</h3>
+                        <h3 class="popover-header bg-primary">그룹 A, 그룹 B</h3>
+                        <h3 class="popover-header bg-success">그룹 A, 그룹 B</h3>
+                        <h3 class="popover-header bg-warning">그룹 A, 그룹 B</h3>
+                        <h3 class="popover-header bg-danger">그룹 A, 그룹 B</h3>
+                        <h3 class="popover-header bg-noise">그룹 A, 그룹 B</h3>
+                        <h3 class="popover-header bg-weather">그룹 A, 그룹 B</h3>
                         <div class="popover-body">
                             <div class="p-3 border-bottom">
                                 <h5 class="mb-0">한화건설-포레나루원시티 2</h5>
@@ -187,12 +194,13 @@
                     </button>
                 </div>
             </div>
-            <div class="modal-body p-0 py-1 rounded-bottom" style="background-color:#d3d8e3;">
-                <div class="m-2 shadow">
-                    <h6 class="text-danger px-3 py-2 mb-0 rounded-top" style="background-color:#f2f2f2;">
-                        소음센서 #한화건설 포레나 루원시티 소음센서
+            <div class="modal-body p-0 py-1 rounded-bottom bg-white">
+                <!-- status-normal status-bad status-alert -->
+                <div class="m-2 cpanel censor-dust status-good">
+                    <h6 class="card-header px-3 py-2 mb-0 rounded-top">
+                        <span class="title">소음센서 #한화건설 포레나 루원시티 소음센서</span>
                     </h6>
-                    <div class="bg-white rounded-bottom w-100" style="min-height: 200px;">
+                    <div class="card-body rounded-bottom w-100" style="min-height: 200px;">
                         <div class="p-3">
                             <div class="row justify-content-center custom-alert">
                                 <div style="width: 2.2rem; height: 2.2rem;" class="center rounded-circle small font-weight-bold mx-2 alert-purple">Leq</div>
@@ -201,7 +209,7 @@
                             </div>
 
                             <div class="row my-4">
-                                <div class="col text-center text-danger" style="color:#f70059!important;" v-for="(value,key) in items">
+                                <div class="col text-center" v-for="(value,key) in items">
                                     <span class="h5 font-weight-bold">{{key}}</span>
                                     <div>
                                         <span class="h1 font-weight-bold">{{value}}</span>

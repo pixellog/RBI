@@ -4333,3 +4333,10 @@ img { max-width: 100%; }
     text-decoration: none;
     background-color: #eeeeee;
 }
+
+.bg-primary {background-color: #0099ff !important;}
+.bg-success {background-color: #34cb32 !important;}
+.bg-warning {background-color: #ff9933 !important;}
+.bg-danger {background-color: #ff3334 !important;}
+.bg-noise {background-color: #ff6599 !important;}
+.bg-weather {background-color: #9966ff !important;}
