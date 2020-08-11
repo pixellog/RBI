@@ -76,12 +76,12 @@
                     <div class="popper-content d-none">
                         <div class="arrow"></div>
                         <h3 class="popover-header">그룹 A, 그룹 B</h3>
-<!--                        <h3 class="popover-header bg-primary">그룹 A, 그룹 B</h3>-->
-<!--                        <h3 class="popover-header bg-success">그룹 A, 그룹 B</h3>-->
-<!--                        <h3 class="popover-header bg-warning">그룹 A, 그룹 B</h3>-->
-<!--                        <h3 class="popover-header bg-danger">그룹 A, 그룹 B</h3>-->
-<!--                        <h3 class="popover-header bg-noise">그룹 A, 그룹 B</h3>-->
-<!--                        <h3 class="popover-header bg-weather">그룹 A, 그룹 B</h3>-->
+                        <!--                        <h3 class="popover-header bg-primary">그룹 A, 그룹 B</h3>-->
+                        <!--                        <h3 class="popover-header bg-success">그룹 A, 그룹 B</h3>-->
+                        <!--                        <h3 class="popover-header bg-warning">그룹 A, 그룹 B</h3>-->
+                        <!--                        <h3 class="popover-header bg-danger">그룹 A, 그룹 B</h3>-->
+                        <!--                        <h3 class="popover-header bg-noise">그룹 A, 그룹 B</h3>-->
+                        <!--                        <h3 class="popover-header bg-weather">그룹 A, 그룹 B</h3>-->
                         <div class="popover-body">
                             <div class="p-3 border-bottom">
                                 <h5 class="mb-0">한화건설-포레나루원시티 2</h5>
@@ -180,7 +180,7 @@
 
 <!-- 상세팝업-->
 <div id="modal-detail" class="modal" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
         <div class="modal-content border-0 bg-transparent">
             <div class="modal-header d-block p-0">
                 <div class="bg-dark text-white px-3 py-2 w-100 rounded-top">그룹 A, 그룹 B</div>
@@ -194,35 +194,203 @@
                     </button>
                 </div>
             </div>
-            <div class="modal-body p-0 py-1 rounded-bottom bg-white">
-                <!-- status-normal status-bad status-alert -->
-                <div class="m-2 cpanel censor-dust status-good">
-                    <h6 class="card-header px-3 py-2 mb-0 rounded-top">
-                        <span class="title">소음센서 #한화건설 포레나 루원시티 소음센서</span>
-                    </h6>
-                    <div class="card-body rounded-bottom w-100" style="min-height: 200px;">
-                        <div class="p-3">
-                            <div class="row justify-content-center custom-alert">
-                                <div style="width: 2.2rem; height: 2.2rem;" class="center rounded-circle small font-weight-bold mx-2 alert-purple">Leq</div>
-                                <div style="width: 2.2rem; height: 2.2rem;" class="center rounded-circle small font-weight-bold mx-2 alert-primary">Lmax</div>
-                                <div style="width: 2.2rem; height: 2.2rem;" class="center rounded-circle small font-weight-bold mx-2 alert-danger">L10</div>
-                            </div>
+            <div class="modal-body p-3 pt-3 pb-0 rounded-bottom bg-white" style="overflow-x: hidden">
 
-                            <div class="row my-4">
-                                <div class="col text-center" v-for="(value,key) in items">
-                                    <span class="h5 font-weight-bold">{{key}}</span>
-                                    <div>
-                                        <span class="h1 font-weight-bold">{{value}}</span>
-                                        <span class="h6">dB(A)</span>
+                <div class="row">
+                    <!-- .col-6 ... : 한칸 크기 센서패널을 위한 세로 컨테이너 -->
+                    <div class="col-12 col-md-12 col-lg-12 mb-3">
+                        <div id="cpanel-noise2" class="card cpanel censor-dust status-good">
+                            <div class="card-header">
+                                <h5 class="title">소음센서 #한화건설 포레나 루원시티 소음센서</h5>
+                                <ul class="nav">
+                                    <li class="nav-item close">
+                                        <a href="#close" class="nav-link" title="닫기">
+                                            <img class="img-close" src="http://221.143.20.239:8888/user/img/close.svg" alt="닫기">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <div class="p-3">
+                                    <div class="row justify-content-center custom-alert">
+                                        <div style="width: 2.2rem; height: 2.2rem;" class="center rounded-circle small font-weight-bold mx-2 alert-purple">Leq</div>
+                                        <div style="width: 2.2rem; height: 2.2rem;" class="center rounded-circle small font-weight-bold mx-2 alert-primary">Lmax</div>
+                                        <div style="width: 2.2rem; height: 2.2rem;" class="center rounded-circle small font-weight-bold mx-2 alert-danger">L10</div>
+                                    </div>
+
+                                    <div class="row my-4">
+                                        <div class="col text-center" v-for="(value,key) in items">
+                                            <span class="h5 font-weight-bold">{{key}}</span>
+                                            <div>
+                                                <span class="h1 font-weight-bold">{{value}}</span>
+                                                <span class="h6">dB(A)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div style="height: 160px;">
+                                        <canvas id="myChart"></canvas>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div style="height: 160px;">
-                                <canvas id="myChart"></canvas>
-                            </div>
-                        </div>
+                            </div> <!-- /.card-body -->
+                        </div> <!-- /#cpanel-gas -->
                     </div>
+                    <!-- /.col-6 ... -->
+                </div>
+
+                <div class="row">
+                    <!-- .col-6 ... : 한칸 크기 센서패널을 위한 세로 컨테이너 -->
+                    <div class="col-12 col-md-12 col-lg-12 mb-3">
+                        <div id="cpanel-noise1" class="card cpanel censor-noise2">
+                            <div class="card-header">
+                                <h5 class="title">
+                                    소음센서 #SK건설 인천 루원2 소음
+
+                                </h5>
+                                <ul class="nav">
+                                    <li class="nav-item close">
+                                        <a href="#close" class="nav-link" title="닫기">
+                                            <img class="img-close" src="http://221.143.20.239:8888/user/img/close.svg" alt="닫기">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <div class="nav nav-tabs" role="tablist">
+
+                                    <a class="nav-item nav-link active" href="#NOISE-00000000000007d6-LEQ-1" data-toggle="tab">
+									            <span class="ctitle">
+										            <span class="ctitle-item icon">
+                                                        <img src="http://221.143.20.239:8888/user/img/icon-tab-NOISE-LEQ.svg" alt="Leq">
+                                                    </span>
+										            <span class="ctitle-item value">
+                                                        <span class="NOISE1_LEQ_VALUE">62.1</span>
+                                                        <i>dB(A)</i>
+                                                    </span>
+									            </span>
+                                    </a>
+
+                                    <a class="nav-item nav-link" href="#NOISE-00000000000007d6-LMAX-2" data-toggle="tab">
+									            <span class="ctitle">
+										            <span class="ctitle-item icon">
+                                                        <img src="http://221.143.20.239:8888/user/img/icon-tab-NOISE-LMAX.svg" alt="Lmax">
+                                                    </span>
+										            <span class="ctitle-item value">
+                                                        <span class="NOISE1_LMAX_VALUE">81.1</span>
+                                                        <i>dB(A)</i>
+                                                    </span>
+									            </span>
+                                    </a>
+
+                                    <a class="nav-item nav-link" href="#NOISE-00000000000007d6-L10-3" data-toggle="tab">
+									            <span class="ctitle">
+										            <span class="ctitle-item icon">
+                                                        <img src="http://221.143.20.239:8888/user/img/icon-tab-NOISE-L10.svg" alt="L10">
+                                                    </span>
+										            <span class="ctitle-item value">
+                                                        <span class="NOISE1_L10_VALUE">63.4</span>
+                                                        <i>dB(A)</i>
+                                                    </span>
+									            </span>
+                                    </a>
+
+                                </div> <!-- /.nav-tabs -->
+                                <div class="tab-content">
+
+                                    <div id="NOISE-00000000000007d6-LEQ-1" class="tab-pane active">
+                                        <div class="chart">
+                                            <div class="chart-header">
+											            <span class="ctitle">
+												            <span class="ctitle-item icon">
+                                                                <img src="http://221.143.20.239:8888/user/img/icon-NOISE-LEQ.svg" alt="Leq">
+                                                            </span>
+												            <span class="ctitle-item value">
+                                                                <span id="NOISE1_LEQ_VALUE" class="NOISE1_LEQ_VALUE">62.1</span>
+                                                                <i>dB(A)</i>
+                                                            </span>
+											            </span>
+                                            </div>
+
+                                            <div class="chart-buttons">
+                                                <a href="#" onclick="goReportDownload('00000000000007d6', 'NOISE')">
+                                                    <img src="http://221.143.20.239:8888/user/img/report-down-1.svg" alt="Report 다운로드">
+                                                </a>
+                                            </div>
+
+                                            <div class="chart-body">
+                                                <div class="chartjs-size-monitor">
+                                                    <div class="chartjs-size-monitor-expand">
+                                                        <div class=""></div>
+                                                    </div>
+                                                    <div class="chartjs-size-monitor-shrink">
+                                                        <div class=""></div>
+                                                    </div>
+                                                </div>
+                                                <canvas id="CHART-NOISE1_1" style="display: block; width: 1636px; height: 180px;" class="chartjs-render-monitor" width="1636" height="180"></canvas>
+                                            </div>
+                                        </div> <!-- /.chart -->
+                                    </div>
+                                    <!-- /.tab-pane -->
+
+                                    <div id="NOISE-00000000000007d6-LMAX-2" class="tab-pane">
+                                        <div class="chart">
+                                            <div class="chart-header">
+											            <span class="ctitle">
+												            <span class="ctitle-item icon">
+                                                                <img src="http://221.143.20.239:8888/user/img/icon-NOISE-LMAX.svg" alt="Lmax">
+                                                            </span>
+												            <span class="ctitle-item value">
+                                                                <span id="NOISE1_LMAX_VALUE" class="NOISE1_LMAX_VALUE">81.1</span>
+                                                                <i>dB(A)</i>
+                                                            </span>
+											            </span>
+                                            </div>
+
+                                            <div class="chart-buttons">
+                                                <a href="#" onclick="goReportDownload('00000000000007d6', 'NOISE')">
+                                                    <img src="http://221.143.20.239:8888/user/img/report-down-1.svg" alt="Report 다운로드">
+                                                </a>
+                                            </div>
+
+                                            <div class="chart-body">
+                                                <canvas id="CHART-NOISE1_2" class="chartjs-render-monitor" width="0" height="0" style="display: block; width: 0px; height: 0px;"></canvas>
+                                            </div>
+                                        </div> <!-- /.chart -->
+                                    </div>
+                                    <!-- /.tab-pane -->
+
+                                    <div id="NOISE-00000000000007d6-L10-3" class="tab-pane">
+                                        <div class="chart">
+                                            <div class="chart-header">
+											            <span class="ctitle">
+												            <span class="ctitle-item icon">
+                                                                <img src="http://221.143.20.239:8888/user/img/icon-NOISE-L10.svg" alt="L10">
+                                                            </span>
+												            <span class="ctitle-item value">
+                                                                <span id="NOISE1_L10_VALUE" class="NOISE1_L10_VALUE">63.4</span>
+                                                                <i>dB(A)</i>
+                                                            </span>
+											            </span>
+                                            </div>
+
+                                            <div class="chart-buttons">
+                                                <a href="#" onclick="goReportDownload('00000000000007d6', 'NOISE')">
+                                                    <img src="http://221.143.20.239:8888/user/img/report-down-1.svg" alt="Report 다운로드">
+                                                </a>
+                                            </div>
+
+                                            <div class="chart-body">
+                                                <canvas id="CHART-NOISE1_3" class="chartjs-render-monitor" width="0" height="0" style="display: block; width: 0px; height: 0px;"></canvas>
+                                            </div>
+                                        </div> <!-- /.chart -->
+                                    </div>
+                                    <!-- /.tab-pane -->
+
+                                </div> <!-- /.tab-content -->
+                            </div> <!-- /.card-body -->
+                        </div> <!-- /#cpanel-gas -->
+                    </div>
+                    <!-- /.col-6 ... -->
                 </div>
             </div>
         </div>
